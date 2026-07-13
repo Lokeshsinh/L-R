@@ -1,18 +1,18 @@
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 
-import Hero from "../components/Home/Hero.jsx";
-import ClientLogoStrip from "../components/Home/ClientLogoStrip.jsx";
-import ProductCategory from "../components/Home/ProductCategory.jsx";
-import AboutPreview from "../components/Home/AboutPreview.jsx";
-import GlobalAuthority from "../components/Home/GlobalAuthority.jsx";
-import WhyPartner from "../components/Home/WhyPartner.jsx";
-import InnovationSlider from "../components/Home/InnovationSlider.jsx";
-import SolarBanner from "../components/Home/SolarBanner.jsx";
-import Testimonials from "../components/Home/Testimonials.jsx";
-import FAQ from "../components/Home/FAQ.jsx";
-import ContactCTA from "../components/Home/ContactCTA.jsx";
-import HeroBanner from "../components/Home/HeroBanner.jsx";
+import Hero from "../components/Home/Hero";
+import ClientLogoStrip from "../components/Home/ClientLogoStrip";
+import ProductCategory from "../components/Home/ProductCategory";
+import AboutPreview from "../components/Home/AboutPreview";
+import GlobalAuthority from "../components/Home/GlobalAuthority";
+import WhyPartner from "../components/Home/WhyPartner";
+import InnovationSlider from "../components/Home/InnovationSlider";
+import SolarBanner from "../components/Home/SolarBanner";
+import Testimonials from "../components/Home/Testimonials";
+import FAQ from "../components/Home/FAQ";
+import ContactCTA from "../components/Home/ContactCTA";
+import HeroBanner from "../components/Home/HeroBanner";
 
 import "../styles/Global.css";
 

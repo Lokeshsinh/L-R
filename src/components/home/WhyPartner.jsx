@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import styles from "../../styles/Why.module.css";
-
+import {
+  Goal,
+  Flag,
+  Users,
+  Eye,
+} from "lucide-react";
 const GoalIcon = () => (
   <svg
     viewBox="0 0 24 24"
@@ -76,25 +81,25 @@ const WhyPartner = () => {
       num: "01",
       title: "Our Goals",
       text: "Our goal is to provide excellent quality products, which satisfy every need of our clients adequately and serve them well.",
-      icon: <GoalIcon />,
+      icon: <Goal size={30} strokeWidth={2} />,
     },
     {
       num: "02",
       title: "Our Mission",
       text: "Our mission is to work hard to take care of whatever our clients want now and in the future and prosper doing so.",
-      icon: <MissionIcon />,
+      icon: <Flag size={30} strokeWidth={2} />,
     },
     {
       num: "03",
       title: "Our Client",
-      text: "Our aim is to keep thriving tirelessly to reach the core of the satisfaction of our clients with our amazing services. We make client happy",
-      icon: <ClientIcon />,
+      text: "Our aim is to keep thriving tirelessly to reach the core of the satisfaction of our clients with our amazing services. We make client happy.",
+      icon: <Users size={30} strokeWidth={2} />,
     },
     {
       num: "04",
       title: "Our Vision",
       text: "Big or small we have delivered every project on time and to customers satisfaction.",
-      icon: <VisionIcon />,
+      icon: <Eye size={30} strokeWidth={2} />,
     },
   ];
 
@@ -102,10 +107,9 @@ const WhyPartner = () => {
     <section className={styles["why-section"]}>
       <div
         className={styles.bgOverlay}
-        style={{ backgroundImage: "url('/Images/built2.png')" }}
       />
       <div className={styles["section-head"]}>
-        <span className={styles.tag}>• Why Choose us</span>
+        <span className={styles.tag}>• Why   <label style={{ color: "#293F67" }}>Choose us</label></span>
         <div className={styles.center}>
           <h2>
             Why Partner with <span>L & R GREEN INDIA?</span>
@@ -121,21 +125,31 @@ const WhyPartner = () => {
       </div>
 
       <div
-        className={styles["why-grid"]}
+        className={styles.whyGrid}
         onMouseLeave={() => setActiveIndex(1)}
       >
         {items.map((item, index) => (
           <div
-            className={`${styles["why-card"]} ${activeIndex === index ? styles["why-card-active"] : ""}`}
-            key={item.title}
+            key={index}
             onMouseEnter={() => setActiveIndex(index)}
+            className={`${styles.whyCard} ${activeIndex === index ? styles.active : ""
+              }`}
           >
-            <div className={styles["card-top"]}>
-              <div className={styles["why-icon"]}>{item.icon}</div>
-              <span className={styles["card-num"]}>{item.num}</span>
+            <div className={styles.topArea}>
+              <div className={styles.iconBox}>
+                {item.icon}
+              </div>
+
+              <span className={styles.number}>
+                {item.num}
+              </span>
             </div>
+
             <h3>{item.title}</h3>
+
             <p>{item.text}</p>
+
+            <span className={styles.bottomLine}></span>
           </div>
         ))}
       </div>

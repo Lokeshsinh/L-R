@@ -1,11 +1,15 @@
 import styles from "../../styles/About.module.css";
+import preBuild from '../../assets/Home/pre.png'
+import { ArrowUpRight } from "lucide-react";
+
 
 const AboutPreview = () => {
   return (
     <section className={styles["about-section"]}>
       <div className={styles["about-left"]}>
-        <img src="./Images/aboutus.jpg" alt="factory" />
-
+        <div className={styles.aboutImage}>
+          <img src={preBuild} alt="factory" />
+        </div>
         <div className={styles["experience-card"]}>
           <div className={styles["profiles"]}>
             <img
@@ -27,13 +31,14 @@ const AboutPreview = () => {
       </div>
 
       <div className={styles["about-right"]}>
-        <span className={styles.tag}>• About us</span>
+        <span className={styles.tag}>• About <label style={{ color: "#293F67" }}>us</label></span>
 
         <h2>
           Industrial Leaders in Pre-Engineered <br />
-          <span className={styles.underline}>Buildings,</span> Steel Containers
-          & Solar
+          <span styles={{ color: "#293F67" }}>Buildings, Steel Containers
+            & Solar</span>
         </h2>
+        <div className={styles.AboutPrevLine}></div>
 
         <p className={styles.sub}>
           Your Trusted Partner for Prefab & Steel <br />
@@ -58,7 +63,10 @@ const AboutPreview = () => {
           and future-ready industrial growth across India.
         </p>
 
-        <button className={styles["primary-btn"]}>More About Us ↗</button>
+        <button className={styles.primaryBtn}>
+          <span>More About Us</span>
+          <ArrowUpRight className={styles.icon} size={18} strokeWidth={2.3} />
+        </button>
       </div>
     </section>
   );

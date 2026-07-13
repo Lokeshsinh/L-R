@@ -1,0 +1,105 @@
+.bannerSection {
+  background-color: #1e3a6e;
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 56px; /* No right padding — image bleeds to edge */
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 13vw;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  letter-spacing: 4px;
+}
+
+.leftContent {
+  flex: 0 0 55%;
+  max-width: 55%;
+  position: relative;
+  z-index: 2;
+  padding-right: 40px;
+}
+
+.leftContent h2 {
+  font-size: 38px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.leftContent p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.rightContent {
+  flex: 0 0 45%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.buildingImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .bannerSection {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 22px;
+  }
+
+  .leftContent {
+    flex: unset;
+    max-width: 100%;
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .rightContent {
+    flex: unset;
+    width: 100%;
+    height: 240px;
+  }
+
+  .buildingImg {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 760px) {
+  .leftContent h2 {
+    font-size: 26px;
+  }
+
+  .leftContent p {
+    font-size: 13px;
+  }
+
+  .watermark {
+    font-size: 60px;
+  }
+}

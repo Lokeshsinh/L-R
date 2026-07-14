@@ -5,7 +5,15 @@ import {
   Flag,
   Users,
   Eye,
+  Factory,
+  ArrowUpRight,
 } from "lucide-react";
+
+
+import welding from "../../assets/Home/robot.png";
+import robot from "../../assets/Home/welding.png";
+import steel from "../../assets/Home/steel.png";
+import solar from "../../assets/Home/solar.png";
 const GoalIcon = () => (
   <svg
     viewBox="0 0 24 24"
@@ -154,130 +162,66 @@ const WhyPartner = () => {
         ))}
       </div>
 
-      <div className={styles["mosaic-grid"]}>
-        {/* Row 1 */}
-        <div
-          className={styles["mosaic-cell"]}
-          style={{
-            background: "#1e3a6e",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{ marginBottom: "10vh", color: "rgba(255,255,255,0.8)" }}
-          >
-            <path d="M 3 20 V 9 a 2 2 0 0 1 2 -2 h 2 a 2 2 0 0 1 2 2 v 4 L 15 8 v 5 L 21 8 v 12 a 1 1 0 0 1 -1 1 H 4 a 1 1 0 0 1 -1 -1 Z" />
-            <circle
-              cx="8"
-              cy="16"
-              r="0.9"
-              fill="rgba(255,255,255,0.8)"
-              stroke="none"
-            />
-            <circle
-              cx="12"
-              cy="16"
-              r="0.9"
-              fill="rgba(255,255,255,0.8)"
-              stroke="none"
-            />
-            <circle
-              cx="16"
-              cy="16"
-              r="0.9"
-              fill="rgba(255,255,255,0.8)"
-              stroke="none"
-            />
-          </svg>
-          <h3 className={styles["mosaic-label"]}>
+
+      {/* down */}
+
+
+      <div className={styles.grid}>
+        {/* Card 1 */}
+        <div className={`${styles.card} ${styles.blueCard}`}>
+
+          <div className={styles.iconCircle}>
+            <Factory size={38} strokeWidth={2} />
+          </div>
+          <h2>
             TECHNICAL
             <br />
             EXCELLENCE
-          </h3>
+          </h2>
         </div>
 
-        <div
-          className={styles["mosaic-cell"]}
-          style={{ padding: 0, overflow: "hidden" }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=800&q=80"
-            alt="Robotic welding"
-            className={styles["mosaic-img"]}
-          />
+        {/* Card 2 */}
+
+        <div className={`${styles.card} ${styles.imageCard}`}>
+          <img src={welding} alt="" />
+          <div className={styles.overlay}></div>
         </div>
 
-        <div
-          className={styles["mosaic-cell"]}
-          style={{
-            background: "#1e3a6e",
-            position: "relative",
-            padding: 0,
-            overflow: "hidden",
-          }}
-        >
-          <p className={styles["mosaic-caption"]}>
+        {/* Card 3 */}
+
+        <div className={`${styles.card} ${styles.whiteCard}`}>
+          <h3>
             ADVANCED FABRICATION
             <br />
             TECHNOLOGY
-          </p>
-          <img
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
-            alt="Advanced fabrication"
-            className={styles["mosaic-img"]}
-            style={{ opacity: 0.5 }}
-          />
+          </h3>
+          <img src={robot} alt="" />
         </div>
 
-        {/* Row 2 */}
-        <div
-          className={styles["mosaic-cell"]}
-          style={{ padding: 0, overflow: "hidden" }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
-            alt="Steel structures"
-            className={styles["mosaic-img"]}
-          />
+        {/* Card 4 */}
+
+        <div className={`${styles.card} ${styles.imageCard}`}>
+          <img src={steel} alt="" />
+          <div className={styles.overlay}></div>
         </div>
 
-        <div
-          className={styles["mosaic-cell"]}
-          style={{
-            background: "#1e3a6e",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <div className={styles["build-fast-box"]}>
+        {/* Card 5 */}
+
+        <div className={`${styles.card} ${styles.blueCard}`}>
+          <div className={styles.buildBox}>
             BUILD
             <br />
             FAST
           </div>
         </div>
 
-        <div
-          className={styles["mosaic-cell"]}
-          style={{ padding: 0, overflow: "hidden" }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
-            alt="Solar panels"
-            className={styles["mosaic-img"]}
-          />
+        {/* Card 6 */}
+        <div className={`${styles.card} ${styles.imageCard}`}>
+          <img src={solar} alt="" />
+          <div className={styles.overlay}></div>
         </div>
       </div>
+
     </section>
   );
 };
